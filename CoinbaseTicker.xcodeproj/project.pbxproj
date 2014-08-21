@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		362BF02219A5C82A0041E61D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362BF02119A5C82A0041E61D /* Cocoa.framework */; };
+		362BF02C19A5C82A0041E61D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 362BF02A19A5C82A0041E61D /* InfoPlist.strings */; };
+		362BF02E19A5C82A0041E61D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 362BF02D19A5C82A0041E61D /* main.m */; };
+		362BF03219A5C82A0041E61D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 362BF03019A5C82A0041E61D /* Credits.rtf */; };
+		362BF03519A5C82A0041E61D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 362BF03419A5C82A0041E61D /* AppDelegate.m */; };
+		362BF03819A5C82A0041E61D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362BF03619A5C82A0041E61D /* MainMenu.xib */; };
+		362BF03A19A5C82A0041E61D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 362BF03919A5C82A0041E61D /* Images.xcassets */; };
+		362BF04119A5C82A0041E61D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362BF04019A5C82A0041E61D /* XCTest.framework */; };
+		362BF04219A5C82A0041E61D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362BF02119A5C82A0041E61D /* Cocoa.framework */; };
+		362BF04A19A5C82A0041E61D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 362BF04819A5C82A0041E61D /* InfoPlist.strings */; };
+		362BF04C19A5C82A0041E61D /* CoinbaseTickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 362BF04B19A5C82A0041E61D /* CoinbaseTickerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		362BF04319A5C82A0041E61D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 362BF01619A5C8290041E61D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 362BF01D19A5C82A0041E61D;
+			remoteInfo = CoinbaseTicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		362BF01E19A5C82A0041E61D /* CoinbaseTicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinbaseTicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		362BF02119A5C82A0041E61D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		362BF02419A5C82A0041E61D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		362BF02519A5C82A0041E61D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		362BF02619A5C82A0041E61D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		362BF02919A5C82A0041E61D /* CoinbaseTicker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoinbaseTicker-Info.plist"; sourceTree = "<group>"; };
+		362BF02B19A5C82A0041E61D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		362BF02D19A5C82A0041E61D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		362BF02F19A5C82A0041E61D /* CoinbaseTicker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoinbaseTicker-Prefix.pch"; sourceTree = "<group>"; };
+		362BF03119A5C82A0041E61D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		362BF03319A5C82A0041E61D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		362BF03419A5C82A0041E61D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		362BF03719A5C82A0041E61D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		362BF03919A5C82A0041E61D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		362BF03F19A5C82A0041E61D /* CoinbaseTickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinbaseTickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		362BF04019A5C82A0041E61D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		362BF04719A5C82A0041E61D /* CoinbaseTickerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoinbaseTickerTests-Info.plist"; sourceTree = "<group>"; };
+		362BF04919A5C82A0041E61D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		362BF04B19A5C82A0041E61D /* CoinbaseTickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoinbaseTickerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		362BF01B19A5C82A0041E61D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362BF02219A5C82A0041E61D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		362BF03C19A5C82A0041E61D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362BF04219A5C82A0041E61D /* Cocoa.framework in Frameworks */,
+				362BF04119A5C82A0041E61D /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		362BF01519A5C8290041E61D = {
+			isa = PBXGroup;
+			children = (
+				362BF02719A5C82A0041E61D /* CoinbaseTicker */,
+				362BF04519A5C82A0041E61D /* CoinbaseTickerTests */,
+				362BF02019A5C82A0041E61D /* Frameworks */,
+				362BF01F19A5C82A0041E61D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		362BF01F19A5C82A0041E61D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				362BF01E19A5C82A0041E61D /* CoinbaseTicker.app */,
+				362BF03F19A5C82A0041E61D /* CoinbaseTickerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		362BF02019A5C82A0041E61D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				362BF02119A5C82A0041E61D /* Cocoa.framework */,
+				362BF04019A5C82A0041E61D /* XCTest.framework */,
+				362BF02319A5C82A0041E61D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		362BF02319A5C82A0041E61D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				362BF02419A5C82A0041E61D /* AppKit.framework */,
+				362BF02519A5C82A0041E61D /* CoreData.framework */,
+				362BF02619A5C82A0041E61D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		362BF02719A5C82A0041E61D /* CoinbaseTicker */ = {
+			isa = PBXGroup;
+			children = (
+				362BF03319A5C82A0041E61D /* AppDelegate.h */,
+				362BF03419A5C82A0041E61D /* AppDelegate.m */,
+				362BF03619A5C82A0041E61D /* MainMenu.xib */,
+				362BF03919A5C82A0041E61D /* Images.xcassets */,
+				362BF02819A5C82A0041E61D /* Supporting Files */,
+			);
+			path = CoinbaseTicker;
+			sourceTree = "<group>";
+		};
+		362BF02819A5C82A0041E61D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				362BF02919A5C82A0041E61D /* CoinbaseTicker-Info.plist */,
+				362BF02A19A5C82A0041E61D /* InfoPlist.strings */,
+				362BF02D19A5C82A0041E61D /* main.m */,
+				362BF02F19A5C82A0041E61D /* CoinbaseTicker-Prefix.pch */,
+				362BF03019A5C82A0041E61D /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		362BF04519A5C82A0041E61D /* CoinbaseTickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				362BF04B19A5C82A0041E61D /* CoinbaseTickerTests.m */,
+				362BF04619A5C82A0041E61D /* Supporting Files */,
+			);
+			path = CoinbaseTickerTests;
+			sourceTree = "<group>";
+		};
+		362BF04619A5C82A0041E61D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				362BF04719A5C82A0041E61D /* CoinbaseTickerTests-Info.plist */,
+				362BF04819A5C82A0041E61D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		362BF01D19A5C82A0041E61D /* CoinbaseTicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 362BF04F19A5C82A0041E61D /* Build configuration list for PBXNativeTarget "CoinbaseTicker" */;
+			buildPhases = (
+				362BF01A19A5C82A0041E61D /* Sources */,
+				362BF01B19A5C82A0041E61D /* Frameworks */,
+				362BF01C19A5C82A0041E61D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoinbaseTicker;
+			productName = CoinbaseTicker;
+			productReference = 362BF01E19A5C82A0041E61D /* CoinbaseTicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		362BF03E19A5C82A0041E61D /* CoinbaseTickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 362BF05219A5C82A0041E61D /* Build configuration list for PBXNativeTarget "CoinbaseTickerTests" */;
+			buildPhases = (
+				362BF03B19A5C82A0041E61D /* Sources */,
+				362BF03C19A5C82A0041E61D /* Frameworks */,
+				362BF03D19A5C82A0041E61D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				362BF04419A5C82A0041E61D /* PBXTargetDependency */,
+			);
+			name = CoinbaseTickerTests;
+			productName = CoinbaseTickerTests;
+			productReference = 362BF03F19A5C82A0041E61D /* CoinbaseTickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		362BF01619A5C8290041E61D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Kevlarr;
+				TargetAttributes = {
+					362BF03E19A5C82A0041E61D = {
+						TestTargetID = 362BF01D19A5C82A0041E61D;
+					};
+				};
+			};
+			buildConfigurationList = 362BF01919A5C8290041E61D /* Build configuration list for PBXProject "CoinbaseTicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 362BF01519A5C8290041E61D;
+			productRefGroup = 362BF01F19A5C82A0041E61D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				362BF01D19A5C82A0041E61D /* CoinbaseTicker */,
+				362BF03E19A5C82A0041E61D /* CoinbaseTickerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		362BF01C19A5C82A0041E61D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362BF02C19A5C82A0041E61D /* InfoPlist.strings in Resources */,
+				362BF03A19A5C82A0041E61D /* Images.xcassets in Resources */,
+				362BF03219A5C82A0041E61D /* Credits.rtf in Resources */,
+				362BF03819A5C82A0041E61D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		362BF03D19A5C82A0041E61D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362BF04A19A5C82A0041E61D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		362BF01A19A5C82A0041E61D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362BF03519A5C82A0041E61D /* AppDelegate.m in Sources */,
+				362BF02E19A5C82A0041E61D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		362BF03B19A5C82A0041E61D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362BF04C19A5C82A0041E61D /* CoinbaseTickerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		362BF04419A5C82A0041E61D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 362BF01D19A5C82A0041E61D /* CoinbaseTicker */;
+			targetProxy = 362BF04319A5C82A0041E61D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		362BF02A19A5C82A0041E61D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				362BF02B19A5C82A0041E61D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		362BF03019A5C82A0041E61D /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				362BF03119A5C82A0041E61D /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		362BF03619A5C82A0041E61D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				362BF03719A5C82A0041E61D /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		362BF04819A5C82A0041E61D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				362BF04919A5C82A0041E61D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		362BF04D19A5C82A0041E61D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		362BF04E19A5C82A0041E61D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		362BF05019A5C82A0041E61D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoinbaseTicker/CoinbaseTicker-Prefix.pch";
+				INFOPLIST_FILE = "CoinbaseTicker/CoinbaseTicker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		362BF05119A5C82A0041E61D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoinbaseTicker/CoinbaseTicker-Prefix.pch";
+				INFOPLIST_FILE = "CoinbaseTicker/CoinbaseTicker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		362BF05319A5C82A0041E61D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CoinbaseTicker.app/Contents/MacOS/CoinbaseTicker";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoinbaseTicker/CoinbaseTicker-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CoinbaseTickerTests/CoinbaseTickerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		362BF05419A5C82A0041E61D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CoinbaseTicker.app/Contents/MacOS/CoinbaseTicker";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoinbaseTicker/CoinbaseTicker-Prefix.pch";
+				INFOPLIST_FILE = "CoinbaseTickerTests/CoinbaseTickerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		362BF01919A5C8290041E61D /* Build configuration list for PBXProject "CoinbaseTicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				362BF04D19A5C82A0041E61D /* Debug */,
+				362BF04E19A5C82A0041E61D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		362BF04F19A5C82A0041E61D /* Build configuration list for PBXNativeTarget "CoinbaseTicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				362BF05019A5C82A0041E61D /* Debug */,
+				362BF05119A5C82A0041E61D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		362BF05219A5C82A0041E61D /* Build configuration list for PBXNativeTarget "CoinbaseTickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				362BF05319A5C82A0041E61D /* Debug */,
+				362BF05419A5C82A0041E61D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 362BF01619A5C8290041E61D /* Project object */;
+}
