@@ -57,8 +57,8 @@ double *doublePrice;
 }
 
 -(IBAction)updateStatusBar:(id)sender{
-    _price = [NSString stringWithFormat:@"$%@ %@",[self getCurrentBuyPrice],[self getPercent]];
-    
+    _price = [NSString stringWithFormat:@"$%@ %@",[self getCurrentBuyPrice], [self getPercent]];
+    self.statusBar.title = _price;
     //NSLog(price);
 }
 
