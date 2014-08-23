@@ -58,8 +58,7 @@ double *doublePrice;
 
 -(IBAction)updateStatusBar:(id)sender{
     _price = [NSString stringWithFormat:@"$%@ %@",[self getCurrentBuyPrice],[self getPercent]];
-    self.getPercent;
-    self.statusBar.title = _price;
+    
     //NSLog(price);
 }
 
@@ -93,7 +92,7 @@ double *doublePrice;
     percentage = percentage / oldPrice;
     percentage = percentage * 100;
   
-    NSLog(@"%f", percentage);
+    //NSLog(@"%f", percentage);
     if (percentage > 0) {
         oldPrice = [[self getCurrentBuyPrice] doubleValue];
         return [NSString stringWithFormat:@"⬆︎ %.02f%%", percentage];
