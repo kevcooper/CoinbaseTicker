@@ -146,7 +146,7 @@ return @"no change";
         [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"highAlertBool"];
         NSUserNotification *notification = [[NSUserNotification alloc] init];
         notification.title = @"High BTC Price";
-        notification.informativeText = [NSString stringWithFormat:@"the current BTC price on coinable has exceeded $%.02f", [[[NSUserDefaults standardUserDefaults] valueForKey:@"highAlert"] doubleValue]];
+        notification.informativeText = [NSString stringWithFormat:@"the current BTC price on coinbase has exceeded $%.02f", [[[NSUserDefaults standardUserDefaults] valueForKey:@"highAlert"] doubleValue]];
         notification.soundName = NSUserNotificationDefaultSoundName;
         [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
     }
@@ -157,7 +157,7 @@ return @"no change";
         [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"lowAlertBool"];
         NSUserNotification *lowNotification = [[NSUserNotification alloc] init];
         lowNotification.title = @"Low BTC Price";
-        lowNotification.informativeText = [NSString stringWithFormat:@"the current BTC price on coinable has dropped below $%.02f", [[[NSUserDefaults standardUserDefaults] valueForKey:@"lowAlert"] doubleValue]];
+        lowNotification.informativeText = [NSString stringWithFormat:@"the current BTC price on coinbase has dropped below $%.02f", [[[NSUserDefaults standardUserDefaults] valueForKey:@"lowAlert"] doubleValue]];
         lowNotification.soundName = NSUserNotificationDefaultSoundName;
         [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:lowNotification];
     }
