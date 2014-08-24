@@ -26,6 +26,11 @@
 {
     // Insert code here to initialize your application
     [NSTimer scheduledTimerWithTimeInterval:300.0 target:self selector:@selector(updateStatusBar:) userInfo:nil repeats:YES];
+    [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
+}
+
+- (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center shouldPresentNotification:(NSUserNotification *)notification{
+    return YES;
 }
 
 double oldPrice = 0.0;
@@ -59,7 +64,36 @@ double *doublePrice;
 -(IBAction)updateStatusBar:(id)sender{
     _price = [NSString stringWithFormat:@"$%@ %@",[self getCurrentBuyPrice], [self getPercent]];
     self.statusBar.title = _price;
+    [self Alerts];
     //NSLog(price);
+}
+
+- (IBAction)setAlertValues:(id)sender {
+    if ([_highAlert state] == NSOnState) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"highAlertBool"];
+        [[NSUserDefaults standardUserDefaults] setDouble:[_highValue doubleValue] forKey:@"highAlert"];
+    } else {
+        [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"highAlertBool"];
+    }
+    if ([_lowAlert state] == NSOnState) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"lowAlertBool"];
+        [[NSUserDefaults standardUserDefaults] setDouble:[_lowValue doubleValue] forKey:@"lowAlert"];
+    } else {
+        [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"lowAlertBool"];
+    }
+    [_prefs close];
+}
+
+- (IBAction)openPrefs:(id)sender {
+    [_prefs orderFront:self];
+    if ([[[NSUserDefaults standardUserDefaults] valueForKeyPath:@"highAlertBool"] boolValue]) {
+        [_highAlert setState:NSOnState];
+    }
+    if ([[[NSUserDefaults standardUserDefaults] valueForKeyPath:@"lowAlertBool"] boolValue]) {
+        [_lowAlert setState:NSOnState];
+    }
+    [_lowValue setStringValue:[[NSUserDefaults standardUserDefaults] valueForKey:@"lowAlert"]];
+    [_highValue setStringValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"highAlert"]];
 }
 
 - (IBAction)copyBuyPrice:(id)sender {
@@ -85,7 +119,7 @@ double *doublePrice;
     
     if ( oldPrice == 0.0) {
         oldPrice = [[self getCurrentBuyPrice] doubleValue];
-        return @"";
+        return @"no change";
     }
    
     double percentage = [self.getCurrentBuyPrice doubleValue] - oldPrice;
@@ -95,13 +129,39 @@ double *doublePrice;
     //NSLog(@"%f", percentage);
     if (percentage > 0) {
         oldPrice = [[self getCurrentBuyPrice] doubleValue];
-        return [NSString stringWithFormat:@"⬆︎ %.02f%%", percentage];
+        return [NSString stringWithFormat:@"⬆︎ %.03f%%", percentage];
     }
     else if (oldPrice < 0){
         oldPrice = [[self getCurrentBuyPrice] doubleValue];
-        return [NSString stringWithFormat:@"⬇︎ %.02f%%", percentage];
+        return [NSString stringWithFormat:@"⬇︎ %.03f%%", percentage];
     }
         oldPrice = [_price floatValue];
-return @"";
+return @"no change";
 }
+
+- (void)Alerts {
+    if ([[[NSUserDefaults standardUserDefaults] valueForKeyPath:@"highAlertBool"] boolValue] && [self.getCurrentBuyPrice doubleValue] >= [[[NSUserDefaults standardUserDefaults] valueForKey:@"highAlert"] doubleValue]) {
+        
+        [_highAlert setState:NSOffState];
+        [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"highAlertBool"];
+        NSUserNotification *notification = [[NSUserNotification alloc] init];
+        notification.title = @"High BTC Price";
+        notification.informativeText = [NSString stringWithFormat:@"the current BTC price on coinable has exceeded $%.02f", [[[NSUserDefaults standardUserDefaults] valueForKey:@"highAlert"] doubleValue]];
+        notification.soundName = NSUserNotificationDefaultSoundName;
+        [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    }
+    
+    if ([[[NSUserDefaults standardUserDefaults] valueForKeyPath:@"lowAlertBool"] boolValue] && [self.getCurrentBuyPrice doubleValue] <= [[[NSUserDefaults standardUserDefaults] valueForKey:@"lowAlert"] doubleValue]) {
+        
+        [_lowAlert setState:NSOffState];
+        [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"lowAlertBool"];
+        NSUserNotification *lowNotification = [[NSUserNotification alloc] init];
+        lowNotification.title = @"Low BTC Price";
+        lowNotification.informativeText = [NSString stringWithFormat:@"the current BTC price on coinable has dropped below $%.02f", [[[NSUserDefaults standardUserDefaults] valueForKey:@"lowAlert"] doubleValue]];
+        lowNotification.soundName = NSUserNotificationDefaultSoundName;
+        [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:lowNotification];
+    }
+}
+
+
 @end

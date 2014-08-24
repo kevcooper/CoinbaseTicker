@@ -10,10 +10,21 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSPanel *prefs;
+
 @property (strong, nonatomic) IBOutlet NSMenu *statusMenu;
 @property (strong, nonatomic) NSStatusItem *statusBar;
 @property (strong, nonatomic) NSString *price;
+
+@property (weak) IBOutlet NSButton *highAlert;
+@property (weak) IBOutlet NSButton *lowAlert;
+@property (weak) IBOutlet NSTextField *highValue;
+@property (weak) IBOutlet NSTextField *lowValue;
+
 -(IBAction)updateStatusBar:(id)sender;
+- (IBAction)setAlertValues:(id)sender;
+- (IBAction)openPrefs:(id)sender;
+
+
 - (NSString *)getPercent;
 @end

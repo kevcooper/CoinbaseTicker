@@ -13,8 +13,12 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="highAlert" destination="xWj-w4-OhE" id="p3x-gc-ccO"/>
+                <outlet property="highValue" destination="62B-ds-zCi" id="M3p-Nj-mTm"/>
+                <outlet property="lowAlert" destination="LTE-Xm-P8W" id="8hC-wz-oQP"/>
+                <outlet property="lowValue" destination="pay-5b-8t0" id="xxc-Rl-Mmb"/>
+                <outlet property="prefs" destination="Rjw-FI-oLo" id="6JK-mn-Kkd"/>
                 <outlet property="statusMenu" destination="6pc-31-Uup" id="QPc-qN-0ke"/>
-                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -667,22 +671,18 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="CoinbaseTicker" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
-            <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
-                <autoresizingMask key="autoresizingMask"/>
-            </view>
-        </window>
         <menu id="6pc-31-Uup">
             <items>
                 <menuItem title="Update" id="TbQ-vk-Exj">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="updateStatusBar:" target="Voe-Tx-rLC" id="eEt-UM-8Qm"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Set Alarms" id="x76-1C-rQx">
+                    <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                    <connections>
+                        <action selector="openPrefs:" target="Voe-Tx-rLC" id="DaC-yK-ST1"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Buy at Coinbase" id="lJq-WE-bje">
@@ -698,6 +698,60 @@
                     </connections>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="280.5" y="380.5"/>
         </menu>
+        <window title="Set Alerts" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Rjw-FI-oLo" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="864" y="513" width="297" height="106"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <view key="contentView" id="4y0-pU-xml">
+                <rect key="frame" x="0.0" y="0.0" width="297" height="106"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xWj-w4-OhE">
+                        <rect key="frame" x="18" y="70" width="108" height="18"/>
+                        <buttonCell key="cell" type="check" title="Set High Alert" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Dmi-Ql-zpj">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LTE-Xm-P8W">
+                        <rect key="frame" x="18" y="41" width="105" height="18"/>
+                        <buttonCell key="cell" type="check" title="Set Low Alert" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Loj-7H-CZR">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="62B-ds-zCi">
+                        <rect key="frame" x="171" y="64" width="96" height="22"/>
+                        <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="DO7-mP-ANR">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pay-5b-8t0">
+                        <rect key="frame" x="171" y="35" width="96" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Rba-Wd-16Q">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M9q-qY-1U6">
+                        <rect key="frame" x="107" y="-1" width="61" height="32"/>
+                        <buttonCell key="cell" type="push" title="Set" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="01p-XF-MwI">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="setAlertValues:" target="Voe-Tx-rLC" id="vGB-qf-luC"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="128.5" y="596"/>
+        </window>
     </objects>
 </document>
