@@ -131,7 +131,7 @@ double *doublePrice;
         oldPrice = [[self getCurrentBuyPrice] doubleValue];
         return [NSString stringWithFormat:@"⬆︎ %.03f%%", percentage];
     }
-    else if (oldPrice < 0){
+    else if (percentage < 0){
         oldPrice = [[self getCurrentBuyPrice] doubleValue];
         return [NSString stringWithFormat:@"⬇︎ %.03f%%", percentage];
     }
