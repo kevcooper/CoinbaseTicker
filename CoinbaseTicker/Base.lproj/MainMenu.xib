@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6206.8" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6206.8"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -676,7 +676,7 @@
                 <menuItem title="Update" id="TbQ-vk-Exj">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="updateStatusBar:" target="Voe-Tx-rLC" id="eEt-UM-8Qm"/>
+                        <action selector="updateButton:" target="Voe-Tx-rLC" id="KpM-yl-EVW"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Set Alarms" id="x76-1C-rQx">
@@ -698,7 +698,6 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="280.5" y="380.5"/>
         </menu>
         <window title="Set Alerts" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Rjw-FI-oLo" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
@@ -751,7 +750,6 @@
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="128.5" y="596"/>
         </window>
     </objects>
 </document>

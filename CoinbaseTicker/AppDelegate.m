@@ -10,6 +10,10 @@
 #include <math.h>
 
 @implementation AppDelegate
+
+double oldPrice = 0.0;
+double *doublePrice;
+
 - (void)awakeFromNib{
     self.statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     
@@ -25,7 +29,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-    [NSTimer scheduledTimerWithTimeInterval:300.0 target:self selector:@selector(updateStatusBar:) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:300.0 target:self selector:@selector(fetchUpdates) userInfo:nil repeats:YES];
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
 }
 
@@ -33,8 +37,6 @@
     return YES;
 }
 
-double oldPrice = 0.0;
-double *doublePrice;
 -(NSString *)getCurrentBuyPrice{
     NSURL *downloadURL = [NSURL URLWithString:@"https://coinbase.com/api/v1/prices/buy"];
     NSData *data = [NSData dataWithContentsOfURL:downloadURL];
@@ -61,11 +63,14 @@ double *doublePrice;
     return price;
 }
 
--(IBAction)updateStatusBar:(id)sender{
+-(IBAction)updateButton:(id)sender{
+    [self performSelectorInBackground:@selector(getUpdatesAndRefresh) withObject:nil];
+}
+
+-(void)getUpdatesAndRefresh{
     _price = [NSString stringWithFormat:@"$%@ %@",[self getCurrentBuyPrice], [self getPercent]];
     self.statusBar.title = _price;
     [self Alerts];
-    //NSLog(price);
 }
 
 - (IBAction)setAlertValues:(id)sender {

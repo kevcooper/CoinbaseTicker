@@ -21,7 +21,7 @@
 @property (weak) IBOutlet NSTextField *highValue;
 @property (weak) IBOutlet NSTextField *lowValue;
 
--(IBAction)updateStatusBar:(id)sender;
+-(IBAction)updateButton:(id)sender;
 - (IBAction)setAlertValues:(id)sender;
 - (IBAction)openPrefs:(id)sender;
 
