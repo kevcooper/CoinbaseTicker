@@ -11,5 +11,10 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (strong, nonatomic) IBOutlet NSMenu *statusMenu;
+@property (strong, nonatomic) NSStatusItem *statusBar;
+@property (strong, nonatomic) NSString *price;
+
+-(IBAction)updateStatusBarButton:(id)sender;
 
 @end

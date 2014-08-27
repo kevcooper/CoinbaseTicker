@@ -18,6 +18,7 @@
 		362BF04219A5C82A0041E61D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362BF02119A5C82A0041E61D /* Cocoa.framework */; };
 		362BF04A19A5C82A0041E61D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 362BF04819A5C82A0041E61D /* InfoPlist.strings */; };
 		362BF04C19A5C82A0041E61D /* CoinbaseTickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 362BF04B19A5C82A0041E61D /* CoinbaseTickerTests.m */; };
+		3674304119A5CB360055F2F7 /* getPrice.py in Resources */ = {isa = PBXBuildFile; fileRef = 3674304019A5CB360055F2F7 /* getPrice.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		362BF04719A5C82A0041E61D /* CoinbaseTickerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoinbaseTickerTests-Info.plist"; sourceTree = "<group>"; };
 		362BF04919A5C82A0041E61D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		362BF04B19A5C82A0041E61D /* CoinbaseTickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoinbaseTickerTests.m; sourceTree = "<group>"; };
+		3674304019A5CB360055F2F7 /* getPrice.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = getPrice.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				362BF03319A5C82A0041E61D /* AppDelegate.h */,
 				362BF03419A5C82A0041E61D /* AppDelegate.m */,
 				362BF03619A5C82A0041E61D /* MainMenu.xib */,
+				3674304019A5CB360055F2F7 /* getPrice.py */,
 				362BF03919A5C82A0041E61D /* Images.xcassets */,
 				362BF02819A5C82A0041E61D /* Supporting Files */,
 			);
@@ -232,6 +235,7 @@
 			files = (
 				362BF02C19A5C82A0041E61D /* InfoPlist.strings in Resources */,
 				362BF03A19A5C82A0041E61D /* Images.xcassets in Resources */,
+				3674304119A5CB360055F2F7 /* getPrice.py in Resources */,
 				362BF03219A5C82A0041E61D /* Credits.rtf in Resources */,
 				362BF03819A5C82A0041E61D /* MainMenu.xib in Resources */,
 			);
@@ -466,6 +470,7 @@
 				362BF05119A5C82A0041E61D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		362BF05219A5C82A0041E61D /* Build configuration list for PBXNativeTarget "CoinbaseTickerTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +479,7 @@
 				362BF05419A5C82A0041E61D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
