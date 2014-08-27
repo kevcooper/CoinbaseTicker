@@ -12,7 +12,6 @@
 @implementation AppDelegate
 
 double oldPrice = 0.0;
-double *doublePrice;
 
 - (void)awakeFromNib{
     self.statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
@@ -29,7 +28,7 @@ double *doublePrice;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-    [NSTimer scheduledTimerWithTimeInterval:300.0 target:self selector:@selector(fetchUpdates) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:300.0 target:self selector:@selector(getUpdatesAndRefresh) userInfo:nil repeats:YES];
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
 }
 
@@ -131,7 +130,6 @@ double *doublePrice;
     percentage = percentage / oldPrice;
     percentage = percentage * 100;
   
-    //NSLog(@"%f", percentage);
     if (percentage > 0) {
         oldPrice = [[self getCurrentBuyPrice] doubleValue];
         return [NSString stringWithFormat:@"⬆︎ %.03f%%", percentage];
