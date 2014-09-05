@@ -7,79 +7,59 @@
 //
 
 #import "AppDelegate.h"
+#import "CoinBase.h"
 
 @implementation AppDelegate
 
 - (void)awakeFromNib{
+    
+    if([[NSUserDefaults standardUserDefaults]valueForKey:@"updateInterval"]){
+        _updateInterval = (int)[[NSUserDefaults standardUserDefaults]integerForKey:@"updateInterval"];
+    }else{
+        _updateInterval = 5;
+    }
+    
     self.statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    
-    _price = [NSString stringWithFormat:@"%@/%@",[self getCurrentBuyPrice],[self getCurrentSellPrice]];
-    self.statusBar.title = _price;
-    
-    // you can also set an image
-    //self.statusBar.image =
-    
     self.statusBar.menu = self.statusMenu;
     self.statusBar.highlightMode = YES;
+    self.statusBar.title = _statusTitle;
+
 }
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-    // Insert code here to initialize your application
-    [NSTimer scheduledTimerWithTimeInterval:300.0 target:self selector:@selector(updateInfo) userInfo:nil repeats:YES];
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification{
+    [self reloadStatusBar];
+    [_intervalTextField setIntValue:_updateInterval];
+    [_intervalSlider setIntValue:_updateInterval];
+    
+    _updateTimer = [NSTimer scheduledTimerWithTimeInterval:(_updateInterval * 60) target:self selector:@selector(updateInfo) userInfo:nil repeats:YES];
 }
 
--(NSString *)getCurrentBuyPrice{
-    NSURL *downloadURL = [NSURL URLWithString:@"https://coinbase.com/api/v1/prices/buy"];
-    NSData *data = [NSData dataWithContentsOfURL:downloadURL];
+-(IBAction)changeUpdateInterval:(id)sender{
+    _updateInterval = [sender intValue];
+    [[NSUserDefaults standardUserDefaults]setInteger:_updateInterval forKey:@"updateInterval"];
+    [_intervalTextField setIntValue:_updateInterval];
     
-    NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSError *e = nil;
-    NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:jsonData options: NSJSONReadingMutableContainers error: &e];
-    
-    NSString *price = [[JSON valueForKey:@"subtotal"]valueForKey:@"amount"];
-    return price;
-}
-
--(NSString *)getCurrentSellPrice{
-    NSURL *downloadURL = [NSURL URLWithString:@"https://coinbase.com/api/v1/prices/sell"];
-    NSData *data = [NSData dataWithContentsOfURL:downloadURL];
-    
-    NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSError *e = nil;
-    NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:jsonData options: NSJSONReadingMutableContainers error: &e];
-    
-    NSString *price = [[JSON valueForKey:@"subtotal"]valueForKey:@"amount"];
-    return price;
+    [_updateTimer invalidate];
+    _updateTimer = [NSTimer scheduledTimerWithTimeInterval:(_updateInterval * 60) target:self selector:@selector(updateStatusBarButton:) userInfo:nil repeats:YES];
 }
 
 -(IBAction)updateStatusBarButton:(id)sender{
+    [self reloadStatusBar];
     [self performSelectorInBackground:@selector(updateInfo) withObject:nil];
 }
 
 -(void)updateInfo{
-    _price = [NSString stringWithFormat:@"%@/%@",[self getCurrentBuyPrice],[self getCurrentSellPrice]];
-    self.statusBar.title = _price;
+    [_coinBase reloadPrices];
+    [self reloadStatusBar];
 }
 
-- (IBAction)copyBuyPrice:(id)sender {
-    NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
-    [pasteboard declareTypes:[NSArray arrayWithObjects:NSStringPboardType, nil] owner:nil];
-    NSArray *splitPrices = [_price componentsSeparatedByString:@"/"];
-    [pasteboard setString:splitPrices[0] forType:NSStringPboardType];
-}
-
-- (IBAction)copySellPrice:(id)sender {
-    NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
-    [pasteboard declareTypes:[NSArray arrayWithObjects:NSStringPboardType, nil] owner:nil];
-    NSArray *splitPrices = [_price componentsSeparatedByString:@"/"];
-    [pasteboard setString:splitPrices[1] forType:NSStringPboardType];
-}
-
-- (IBAction)goToCoinbase:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://coinbase.com"]];
+-(void)reloadStatusBar{
+    if([[[NSUserDefaults standardUserDefaults]valueForKey:@"showSellPrice"] integerValue] == YES){
+        _statusTitle = [NSString stringWithFormat:@"$%.2f/$%.2f",_coinBase.buyPrice,_coinBase.sellPrice];
+    }else{
+        _statusTitle = [NSString stringWithFormat:@"$%.2f",_coinBase.buyPrice];
+    }
+    self.statusBar.title = _statusTitle;
 }
 
 @end

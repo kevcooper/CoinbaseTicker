@@ -7,13 +7,19 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+@class CoinBase;
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 @property (strong, nonatomic) IBOutlet NSMenu *statusMenu;
 @property (strong, nonatomic) NSStatusItem *statusBar;
-@property (strong, nonatomic) NSString *price;
+@property (strong, nonatomic) NSString *statusTitle;
+@property (strong, nonatomic) NSTimer *updateTimer;
+@property int updateInterval;
+
+@property (strong) IBOutlet NSTextField *intervalTextField;
+@property (strong) IBOutlet NSSlider *intervalSlider;
+@property (strong) IBOutlet CoinBase *coinBase;
 
 -(IBAction)updateStatusBarButton:(id)sender;
 

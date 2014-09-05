@@ -13,10 +13,15 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="coinBase" destination="KkH-uK-hST" id="bbg-Iv-Cx4"/>
+                <outlet property="intervalSlider" destination="0uu-t9-76k" id="QYM-Lm-4Xo"/>
+                <outlet property="intervalTextField" destination="hjS-JI-zaG" id="acY-5N-7n1"/>
+                <outlet property="showSellPrice" destination="H1n-wI-fCG" id="7OK-Cz-93X"/>
                 <outlet property="statusMenu" destination="6pc-31-Uup" id="QPc-qN-0ke"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
+        <customObject id="KkH-uK-hST" customClass="CoinBase"/>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
@@ -668,13 +673,66 @@
             </items>
         </menu>
         <window title="CoinbaseTicker" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" rightStrut="YES" topStrut="YES"/>
+            <rect key="contentRect" x="902" y="756" width="215" height="122"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="215" height="122"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H1n-wI-fCG">
+                        <rect key="frame" x="49" y="93" width="116" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Show Sell Price" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="CWl-mH-Qwx">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="updateStatusBarButton:" target="Voe-Tx-rLC" id="9ki-fV-EZb"/>
+                            <binding destination="Jam-Kt-L3X" name="value" keyPath="values.showSellPrice" id="trU-EC-4zy">
+                                <dictionary key="options">
+                                    <bool key="NSValidatesImmediately" value="YES"/>
+                                </dictionary>
+                            </binding>
+                        </connections>
+                    </button>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0uu-t9-76k">
+                        <rect key="frame" x="18" y="18" width="179" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="1" maxValue="60" doubleValue="5" tickMarkPosition="below" sliderType="linear" id="u5F-PQ-ow4"/>
+                        <connections>
+                            <action selector="changeUpdateInterval:" target="Voe-Tx-rLC" id="fdO-8S-xsu"/>
+                        </connections>
+                    </slider>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hjS-JI-zaG">
+                        <rect key="frame" x="129" y="50" width="33" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="" drawsBackground="YES" id="VPq-s0-Ogn">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rmf-hR-dUV">
+                        <rect key="frame" x="19" y="53" width="104" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Update Interval:" id="Bka-X5-VBy">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tob-sg-bgv">
+                        <rect key="frame" x="168" y="52" width="28" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="min" id="Zjl-sA-qre">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
             </view>
         </window>
         <menu id="6pc-31-Uup">
@@ -688,19 +746,25 @@
                 <menuItem title="Copy Buy" id="3CP-0F-og1">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="copyBuyPrice:" target="Voe-Tx-rLC" id="O0h-TL-3yJ"/>
+                        <action selector="copyBuyPrice:" target="KkH-uK-hST" id="uao-Sq-UYm"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Copy Sell" id="mZ5-xe-8CP">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="copySellPrice:" target="Voe-Tx-rLC" id="fQU-Vi-Zut"/>
+                        <action selector="copySellPrice:" target="KkH-uK-hST" id="4T7-38-30M"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Coinbase" id="lJq-WE-bje">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="goToCoinbase:" target="Voe-Tx-rLC" id="GXi-R6-To9"/>
+                        <action selector="goToCoinbase:" target="KkH-uK-hST" id="bhw-fO-nC3"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Prefs" id="dEZ-1c-5fi">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="makeKeyAndOrderFront:" target="QvC-M9-y7g" id="svS-Ju-H1b"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Quit" id="6ud-69-7e6">
@@ -711,5 +775,6 @@
                 </menuItem>
             </items>
         </menu>
+        <userDefaultsController representsSharedInstance="YES" id="Jam-Kt-L3X"/>
     </objects>
 </document>
