@@ -19,6 +19,7 @@
 		362BF04A19A5C82A0041E61D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 362BF04819A5C82A0041E61D /* InfoPlist.strings */; };
 		362BF04C19A5C82A0041E61D /* CoinbaseTickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 362BF04B19A5C82A0041E61D /* CoinbaseTickerTests.m */; };
 		36BA707519B97B8000D3CD47 /* CoinBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BA707419B97B8000D3CD47 /* CoinBase.m */; };
+		36DC2A531A0AB59900A810E1 /* StatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DC2A521A0AB59900A810E1 /* StatusBarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		362BF04B19A5C82A0041E61D /* CoinbaseTickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoinbaseTickerTests.m; sourceTree = "<group>"; };
 		36BA707319B97B8000D3CD47 /* CoinBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinBase.h; sourceTree = "<group>"; };
 		36BA707419B97B8000D3CD47 /* CoinBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoinBase.m; sourceTree = "<group>"; };
+		36DC2A511A0AB59900A810E1 /* StatusBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarView.h; sourceTree = "<group>"; };
+		36DC2A521A0AB59900A810E1 /* StatusBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				362BF03619A5C82A0041E61D /* MainMenu.xib */,
 				36BA707319B97B8000D3CD47 /* CoinBase.h */,
 				36BA707419B97B8000D3CD47 /* CoinBase.m */,
+				36DC2A511A0AB59900A810E1 /* StatusBarView.h */,
+				36DC2A521A0AB59900A810E1 /* StatusBarView.m */,
 				362BF03919A5C82A0041E61D /* Images.xcassets */,
 				362BF02819A5C82A0041E61D /* Supporting Files */,
 			);
@@ -259,6 +264,7 @@
 			files = (
 				362BF03519A5C82A0041E61D /* AppDelegate.m in Sources */,
 				36BA707519B97B8000D3CD47 /* CoinBase.m in Sources */,
+				36DC2A531A0AB59900A810E1 /* StatusBarView.m in Sources */,
 				362BF02E19A5C82A0041E61D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

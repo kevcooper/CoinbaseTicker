@@ -8,58 +8,51 @@
 
 #import "AppDelegate.h"
 #import "CoinBase.h"
+#import "StatusBarView.h"
 
 @implementation AppDelegate
 
+NSUserDefaults *prefs;
+int updateInterval;
+
 - (void)awakeFromNib{
+    prefs = [NSUserDefaults standardUserDefaults];
     
-    if([[NSUserDefaults standardUserDefaults]valueForKey:@"updateInterval"]){
-        _updateInterval = (int)[[NSUserDefaults standardUserDefaults]integerForKey:@"updateInterval"];
+    if([prefs valueForKey:@"updateInterval"]){
+        updateInterval = (int)[prefs integerForKey:@"updateInterval"];
     }else{
-        _updateInterval = 5;
+        updateInterval = 5;
     }
     
-    self.statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    self.statusBar.menu = self.statusMenu;
-    self.statusBar.highlightMode = YES;
-    self.statusBar.title = _statusTitle;
-
+    _statusBarView = [[StatusBarView alloc]initWithMenu: self.statusMenu];
+    
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification{
-    [self reloadStatusBar];
-    [_intervalTextField setIntValue:_updateInterval];
-    [_intervalSlider setIntValue:_updateInterval];
+    [self updateInfo];
+    [_intervalTextField setIntValue:updateInterval];
+    [_intervalSlider setIntValue:updateInterval];
     
-    _updateTimer = [NSTimer scheduledTimerWithTimeInterval:(_updateInterval * 60) target:self selector:@selector(updateInfo) userInfo:nil repeats:YES];
+    
+    _updateTimer = [NSTimer scheduledTimerWithTimeInterval:(updateInterval * 60) target:self selector:@selector(updateInfo) userInfo:nil repeats:YES];
 }
 
 -(IBAction)changeUpdateInterval:(id)sender{
-    _updateInterval = [sender intValue];
-    [[NSUserDefaults standardUserDefaults]setInteger:_updateInterval forKey:@"updateInterval"];
-    [_intervalTextField setIntValue:_updateInterval];
+    updateInterval = [sender intValue];
+    [[NSUserDefaults standardUserDefaults]setInteger:updateInterval forKey:@"updateInterval"];
+    [_intervalTextField setIntValue:updateInterval];
     
     [_updateTimer invalidate];
-    _updateTimer = [NSTimer scheduledTimerWithTimeInterval:(_updateInterval * 60) target:self selector:@selector(updateStatusBarButton:) userInfo:nil repeats:YES];
+    _updateTimer = [NSTimer scheduledTimerWithTimeInterval:(updateInterval * 60) target:self selector:@selector(updateStatusBarButton:) userInfo:nil repeats:YES];
 }
 
 -(IBAction)updateStatusBarButton:(id)sender{
-    [self reloadStatusBar];
     [self performSelectorInBackground:@selector(updateInfo) withObject:nil];
 }
 
+//timer fired
 -(void)updateInfo{
     [_coinBase reloadPrices];
-    [self reloadStatusBar];
-}
-
--(void)reloadStatusBar{
-    if([[[NSUserDefaults standardUserDefaults]valueForKey:@"showSellPrice"] integerValue] == YES){
-        _statusTitle = [NSString stringWithFormat:@"$%.2f/$%.2f",_coinBase.buyPrice,_coinBase.sellPrice];
-    }else{
-        _statusTitle = [NSString stringWithFormat:@"$%.2f",_coinBase.buyPrice];
-    }
-    self.statusBar.title = _statusTitle;
 }
 
 @end

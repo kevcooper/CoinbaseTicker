@@ -18,16 +18,16 @@
 -(void)reloadPrices{
     _buyPrice = [self getPriceFromAPI:@"https://coinbase.com/api/v1/prices/buy"];
     _sellPrice = [self getPriceFromAPI:@"https://coinbase.com/api/v1/prices/sell"];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"PriceChangedNotification"
+                                                       object:self];
 }
 
 -(double)getPriceFromAPI:(NSString *)URL{
     NSURL *downloadURL = [NSURL URLWithString:URL];
     NSData *data = [NSData dataWithContentsOfURL:downloadURL];
     
-    NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     NSError *e = nil;
-    NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:jsonData options: NSJSONReadingMutableContainers error: &e];
+    NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:data options: NSJSONReadingMutableContainers error: &e];
     
     NSString *price = [[JSON valueForKey:@"subtotal"]valueForKey:@"amount"];
     return [price doubleValue];
