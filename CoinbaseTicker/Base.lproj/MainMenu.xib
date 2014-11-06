@@ -695,9 +695,6 @@
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
-                        <connections>
-                            <binding destination="Jam-Kt-L3X" name="value" keyPath="values.updateInterval" id="eff-iF-2xf"/>
-                        </connections>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rmf-hR-dUV">
                         <rect key="frame" x="19" y="53" width="104" height="17"/>

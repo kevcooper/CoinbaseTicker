@@ -20,6 +20,7 @@
     _sellPrice = [self getPriceFromAPI:@"https://coinbase.com/api/v1/prices/sell"];
     [[NSNotificationCenter defaultCenter]postNotificationName:@"PriceChangedNotification"
                                                        object:self];
+    NSLog(@"Coinbase Price Updated");
 }
 
 -(double)getPriceFromAPI:(NSString *)URL{
