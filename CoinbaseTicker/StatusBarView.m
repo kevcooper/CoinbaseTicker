@@ -51,7 +51,7 @@ NSUserDefaults *prefs;
 }
 
 -(void)prefsChanged:(NSNotification *) aNotification{
-    [self redrawTitle];
+    [self performSelectorInBackground:@selector(redrawTitle) withObject:nil];
 }
 
 -(void)redrawTitle{

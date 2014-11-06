@@ -13,46 +13,30 @@
 @implementation AppDelegate
 
 NSUserDefaults *prefs;
-int updateInterval;
 
 - (void)awakeFromNib{
     prefs = [NSUserDefaults standardUserDefaults];
     
-    if([prefs valueForKey:@"updateInterval"]){
-        updateInterval = (int)[prefs integerForKey:@"updateInterval"];
-    }else{
-        updateInterval = 5;
-    }
-    
-    _statusBarView = [[StatusBarView alloc]initWithMenu: self.statusMenu];
+    [prefs registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                             [NSNumber numberWithInt:5], @"updateInterval",
+                                                             [NSNumber numberWithBool:NO],@"showSellPrice", nil]];
     
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification{
-    [self updateInfo];
-    [_intervalTextField setIntValue:updateInterval];
-    [_intervalSlider setIntValue:updateInterval];
+    _statusBarView = [[StatusBarView alloc]initWithMenu: self.statusMenu];
+    [_intervalSlider setIntegerValue:[prefs integerForKey:@"updateInterval"]];
+    [_coinBase reloadPrices];
     
-    
-    _updateTimer = [NSTimer scheduledTimerWithTimeInterval:(updateInterval * 60) target:self selector:@selector(updateInfo) userInfo:nil repeats:YES];
+    _updateTimer = [NSTimer scheduledTimerWithTimeInterval:([prefs integerForKey:@"updateInterval"] * 60) target:_coinBase selector:@selector(reloadPrices) userInfo:nil repeats:YES];
 }
 
 -(IBAction)changeUpdateInterval:(id)sender{
-    updateInterval = [sender intValue];
-    [[NSUserDefaults standardUserDefaults]setInteger:updateInterval forKey:@"updateInterval"];
-    [_intervalTextField setIntValue:updateInterval];
+    [prefs setInteger:[sender integerValue] forKey:@"updateInterval"];
     
     [_updateTimer invalidate];
-    _updateTimer = [NSTimer scheduledTimerWithTimeInterval:(updateInterval * 60) target:self selector:@selector(updateStatusBarButton:) userInfo:nil repeats:YES];
-}
-
--(IBAction)updateStatusBarButton:(id)sender{
-    [self performSelectorInBackground:@selector(updateInfo) withObject:nil];
-}
-
-//timer fired
--(void)updateInfo{
-    [_coinBase reloadPrices];
+    _updateTimer = [NSTimer scheduledTimerWithTimeInterval:([sender integerValue] * 60) target:_coinBase selector:@selector(reloadPrices) userInfo:nil repeats:YES];
+    
 }
 
 @end

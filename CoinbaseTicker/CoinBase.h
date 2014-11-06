@@ -14,6 +14,8 @@
 @property double sellPrice;
 
 -(IBAction)goToCoinbase:(id)sender;
+-(IBAction)updateStatusBarButton:(id)sender;
+
 -(void)reloadPrices;
 
 @end

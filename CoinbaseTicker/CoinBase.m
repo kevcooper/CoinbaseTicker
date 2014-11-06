@@ -39,6 +39,10 @@
     [pasteboard setString:[NSString stringWithFormat:@"%.2f",price] forType:NSStringPboardType];
 }
 
+-(IBAction)updateStatusBarButton:(id)sender{
+    [self performSelectorInBackground:@selector(reloadPrices) withObject:nil];
+}
+
 - (IBAction)goToCoinbase:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://coinbase.com"]];
 }
