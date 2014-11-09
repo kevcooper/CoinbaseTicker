@@ -23,19 +23,23 @@ NSUserDefaults *prefs;
     return self;
 }
 
--(id)initWithMenu:(NSMenu *) menu{
+-(id)initWithMenu:(NSMenu *) menu model:(CoinBase *)coinBaseModel{
     prefs = [NSUserDefaults standardUserDefaults];
     _statusBarView = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [_statusBarView setHighlightMode:YES];
     _statusBarView.menu = menu;
     
+    model = coinBaseModel;
+    [self redrawTitle];
+    
     [self registerObservers];
+    
     return self;
 }
 
 -(void)registerObservers{
     [[NSNotificationCenter defaultCenter]addObserver:self
-                                            selector:@selector(priceChanged:)
+                                            selector:@selector(redrawTitle)
                                                 name:@"PriceChangedNotification"
                                               object:nil];
     
@@ -43,11 +47,6 @@ NSUserDefaults *prefs;
                                             selector:@selector(prefsChanged:)
                                                 name:NSUserDefaultsDidChangeNotification
                                               object:nil];
-}
-
--(void)priceChanged:(NSNotification *) aNotification{
-    model = aNotification.object;
-    [self redrawTitle];
 }
 
 -(void)prefsChanged:(NSNotification *) aNotification{

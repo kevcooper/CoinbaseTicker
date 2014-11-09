@@ -24,7 +24,8 @@ NSUserDefaults *prefs;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification{
-    _statusBarView = [[StatusBarView alloc]initWithMenu: self.statusMenu];
+    _statusBarView = [[StatusBarView alloc]initWithMenu: self.statusMenu model:_coinBase];
+    
     [_intervalSlider setIntegerValue:[prefs integerForKey:@"updateInterval"]];
     
     _updateTimer = [NSTimer scheduledTimerWithTimeInterval:([prefs integerForKey:@"updateInterval"] * 60) target:_coinBase selector:@selector(reloadPrices) userInfo:nil repeats:YES];

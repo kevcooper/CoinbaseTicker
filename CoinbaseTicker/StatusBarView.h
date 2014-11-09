@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class CoinBase;
 @interface StatusBarView : NSObject
 
 @property (strong) NSStatusItem *statusBarView;
 
--(id)initWithMenu:(NSMenu *)menu;
+-(id)initWithMenu:(NSMenu *)menu model:(CoinBase *)coinBaseModel;
 
 @end
