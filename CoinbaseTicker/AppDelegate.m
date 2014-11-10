@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "CoinBase.h"
 #import "StatusBarView.h"
+#import "CTLog.h"
 
 @implementation AppDelegate
 
@@ -29,7 +30,9 @@ NSUserDefaults *prefs;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification{
-    _statusBarView = [[StatusBarView alloc]initWithMenu: self.statusMenu model:_coinBase];
+    _logger = [[CTLog alloc]init];
+    _coinBase = [[CoinBase alloc]init];
+    _statusBarView = [[StatusBarView alloc]initWithMenu:_statusMenu model:_coinBase];
     
     [_intervalSlider setIntegerValue:[prefs integerForKey:@"updateInterval"]];
     
@@ -41,7 +44,27 @@ NSUserDefaults *prefs;
     
     [_updateTimer invalidate];
     _updateTimer = [NSTimer scheduledTimerWithTimeInterval:([sender integerValue] * 60) target:_coinBase selector:@selector(reloadPrices) userInfo:nil repeats:YES];
-    
+    //[CTLog notifyLogger:[NSString stringWithFormat:@"Update Interval Changed: %ld", (long)[sender integerValue]]];
+}
+
+-(IBAction)updateStatusBarButton:(id)sender{
+    [_coinBase reloadPrices];
+}
+
+- (IBAction)goToCoinbase:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://coinbase.com"]];
+}
+
+-(IBAction)copyBuyPrice:(id)sender{
+    [_coinBase copyPrice:_coinBase.buyPrice];
+}
+
+-(IBAction)copySellPrice:(id)sender{
+    [_coinBase copyPrice:_coinBase.sellPrice];
+}
+
+-(void)applicationWillTerminate:(NSNotification *)notification{
+    [_logger closeLog];
 }
 
 @end

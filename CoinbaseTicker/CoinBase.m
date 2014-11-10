@@ -7,6 +7,7 @@
 //
 
 #import "CoinBase.h"
+#import "CTLog.h"
 
 @implementation CoinBase
 
@@ -21,7 +22,8 @@
     
     [[NSNotificationCenter defaultCenter]postNotificationName:@"PriceChangedNotification"
                                                        object:self];
-    NSLog(@"Coinbase Price Updated");
+    
+    [CTLog notifyLogger:[NSString stringWithFormat:@"Coinbase Price Updated - Buy:$%.2f Sell:$%.2f",_buyPrice,_sellPrice]];
 }
 
 -(double)getPriceFromAPI:(NSString *)URL{
@@ -35,26 +37,10 @@
     return [price doubleValue];
 }
 
-- (void)copyPrice:(double)price{
+-(void)copyPrice:(double)price{
     NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
     [pasteboard declareTypes:[NSArray arrayWithObjects:NSStringPboardType, nil] owner:nil];
     [pasteboard setString:[NSString stringWithFormat:@"%.2f",price] forType:NSStringPboardType];
-}
-
--(IBAction)updateStatusBarButton:(id)sender{
-    [self performSelectorInBackground:@selector(reloadPrices) withObject:nil];
-}
-
-- (IBAction)goToCoinbase:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://coinbase.com"]];
-}
-
--(IBAction)copyBuyPrice:(id)sender{
-    [self copyPrice:_buyPrice];
-}
-
--(IBAction)copySellPrice:(id)sender{
-    [self copyPrice:_sellPrice];
 }
 
 @end

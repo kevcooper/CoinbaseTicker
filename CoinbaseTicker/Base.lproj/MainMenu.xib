@@ -14,14 +14,12 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="coinBase" destination="KkH-uK-hST" id="LgP-af-w3t"/>
                 <outlet property="intervalSlider" destination="0uu-t9-76k" id="WRg-Rc-ctd"/>
                 <outlet property="intervalTextField" destination="hjS-JI-zaG" id="acY-5N-7n1"/>
                 <outlet property="statusMenu" destination="6pc-31-Uup" id="QPc-qN-0ke"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
-        <customObject id="KkH-uK-hST" customClass="CoinBase"/>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
@@ -733,25 +731,25 @@
                 <menuItem title="Update" id="TbQ-vk-Exj">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="updateStatusBarButton:" target="KkH-uK-hST" id="bR7-a2-dWp"/>
+                        <action selector="updateStatusBarButton:" target="Voe-Tx-rLC" id="9bl-Pl-tSb"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Copy Buy" id="3CP-0F-og1">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="copyBuyPrice:" target="KkH-uK-hST" id="uao-Sq-UYm"/>
+                        <action selector="copyBuyPrice:" target="Voe-Tx-rLC" id="x4e-Gp-c1b"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Copy Sell" id="mZ5-xe-8CP">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="copySellPrice:" target="KkH-uK-hST" id="4T7-38-30M"/>
+                        <action selector="copySellPrice:" target="Voe-Tx-rLC" id="QQ5-o9-5Ns"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Coinbase" id="lJq-WE-bje">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="goToCoinbase:" target="KkH-uK-hST" id="bhw-fO-nC3"/>
+                        <action selector="goToCoinbase:" target="Voe-Tx-rLC" id="eyP-FZ-Oma"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Prefs" id="dEZ-1c-5fi">

@@ -18,6 +18,7 @@
 		362BF04219A5C82A0041E61D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362BF02119A5C82A0041E61D /* Cocoa.framework */; };
 		362BF04A19A5C82A0041E61D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 362BF04819A5C82A0041E61D /* InfoPlist.strings */; };
 		362BF04C19A5C82A0041E61D /* CoinbaseTickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 362BF04B19A5C82A0041E61D /* CoinbaseTickerTests.m */; };
+		36900A471A10AD50008D9020 /* CTLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 36900A461A10AD50008D9020 /* CTLog.m */; };
 		36BA707519B97B8000D3CD47 /* CoinBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BA707419B97B8000D3CD47 /* CoinBase.m */; };
 		36DC2A531A0AB59900A810E1 /* StatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DC2A521A0AB59900A810E1 /* StatusBarView.m */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,8 @@
 		362BF04719A5C82A0041E61D /* CoinbaseTickerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoinbaseTickerTests-Info.plist"; sourceTree = "<group>"; };
 		362BF04919A5C82A0041E61D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		362BF04B19A5C82A0041E61D /* CoinbaseTickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoinbaseTickerTests.m; sourceTree = "<group>"; };
+		36900A451A10AD50008D9020 /* CTLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTLog.h; sourceTree = "<group>"; };
+		36900A461A10AD50008D9020 /* CTLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTLog.m; sourceTree = "<group>"; };
 		36BA707319B97B8000D3CD47 /* CoinBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinBase.h; sourceTree = "<group>"; };
 		36BA707419B97B8000D3CD47 /* CoinBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoinBase.m; sourceTree = "<group>"; };
 		36DC2A511A0AB59900A810E1 /* StatusBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarView.h; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				36BA707419B97B8000D3CD47 /* CoinBase.m */,
 				36DC2A511A0AB59900A810E1 /* StatusBarView.h */,
 				36DC2A521A0AB59900A810E1 /* StatusBarView.m */,
+				36900A451A10AD50008D9020 /* CTLog.h */,
+				36900A461A10AD50008D9020 /* CTLog.m */,
 				362BF03919A5C82A0041E61D /* Images.xcassets */,
 				362BF02819A5C82A0041E61D /* Supporting Files */,
 			);
@@ -264,6 +269,7 @@
 			files = (
 				362BF03519A5C82A0041E61D /* AppDelegate.m in Sources */,
 				36BA707519B97B8000D3CD47 /* CoinBase.m in Sources */,
+				36900A471A10AD50008D9020 /* CTLog.m in Sources */,
 				36DC2A531A0AB59900A810E1 /* StatusBarView.m in Sources */,
 				362BF02E19A5C82A0041E61D /* main.m in Sources */,
 			);
