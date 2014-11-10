@@ -48,7 +48,7 @@ NSUserDefaults *prefs;
 }
 
 -(IBAction)updateStatusBarButton:(id)sender{
-    [_coinBase reloadPrices];
+    [_coinBase performSelectorInBackground:@selector(reloadPrices) withObject:nil];
 }
 
 - (IBAction)goToCoinbase:(id)sender {
