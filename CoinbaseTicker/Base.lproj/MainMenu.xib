@@ -683,7 +683,7 @@
                 <subviews>
                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0uu-t9-76k">
                         <rect key="frame" x="18" y="18" width="179" height="20"/>
-                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="1" maxValue="60" doubleValue="1" tickMarkPosition="below" sliderType="linear" id="u5F-PQ-ow4"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="1" maxValue="60" doubleValue="5" tickMarkPosition="below" sliderType="linear" id="u5F-PQ-ow4"/>
                         <connections>
                             <action selector="changeUpdateInterval:" target="Voe-Tx-rLC" id="Y3h-c9-u7t"/>
                         </connections>
@@ -695,6 +695,9 @@
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <binding destination="Jam-Kt-L3X" name="value" keyPath="values.updateInterval" id="2VC-Ke-lCr"/>
+                        </connections>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rmf-hR-dUV">
                         <rect key="frame" x="19" y="53" width="104" height="17"/>

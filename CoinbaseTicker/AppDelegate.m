@@ -18,8 +18,13 @@ NSUserDefaults *prefs;
     prefs = [NSUserDefaults standardUserDefaults];
     
     [prefs registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                             [NSNumber numberWithInt:5], @"updateInterval",
+                                                             [NSNumber numberWithInteger:5], @"updateInterval",
                                                              [NSNumber numberWithBool:NO],@"showSellPrice", nil]];
+    
+    //error check the update interval (prevents people from putting a bad value directly in the plist)
+    if([prefs integerForKey:@"updateInterval"] > 60 || [prefs integerForKey:@"updateInterval"] < 1){
+        [prefs setInteger:5 forKey:@"updateInterval"];
+    }
     
 }
 
