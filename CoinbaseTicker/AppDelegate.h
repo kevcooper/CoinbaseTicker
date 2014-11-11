@@ -19,7 +19,7 @@
 @property (strong, nonatomic) NSTimer *updateTimer;
 @property (strong) CoinBase *coinBase;
 
-@property (strong, nonatomic) IBOutlet NSMenu *statusMenu;
+@property (strong) IBOutlet NSMenu *statusMenu;
 @property (strong) StatusBarView *statusBarView;
 
 @property (strong) IBOutlet NSTextField *intervalTextField;

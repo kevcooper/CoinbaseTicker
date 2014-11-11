@@ -30,40 +30,61 @@ NSUserDefaults *prefs;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification{
-    _logger = [[CTLog alloc]init];
+        _logger = [[CTLog alloc]init];
+        [CTLog notifyLogger:@"CointbaseTicker Started"];
+    
     _coinBase = [[CoinBase alloc]init];
     _statusBarView = [[StatusBarView alloc]initWithMenu:_statusMenu model:_coinBase];
     
     [_intervalSlider setIntegerValue:[prefs integerForKey:@"updateInterval"]];
     
-    _updateTimer = [NSTimer scheduledTimerWithTimeInterval:([prefs integerForKey:@"updateInterval"] * 60) target:_coinBase selector:@selector(reloadPrices) userInfo:nil repeats:YES];
+    _updateTimer = [NSTimer scheduledTimerWithTimeInterval:([prefs integerForKey:@"updateInterval"] * 60)
+                                                    target:self
+                                                  selector:@selector(fireTimer)
+                                                  userInfo:nil
+                                                   repeats:YES];
 }
 
 -(IBAction)changeUpdateInterval:(id)sender{
     [prefs setInteger:[sender integerValue] forKey:@"updateInterval"];
     
     [_updateTimer invalidate];
-    _updateTimer = [NSTimer scheduledTimerWithTimeInterval:([sender integerValue] * 60) target:_coinBase selector:@selector(reloadPrices) userInfo:nil repeats:YES];
-    //[CTLog notifyLogger:[NSString stringWithFormat:@"Update Interval Changed: %ld", (long)[sender integerValue]]];
+    _updateTimer = [NSTimer scheduledTimerWithTimeInterval:([sender integerValue] * 60)
+                                                    target:self
+                                                  selector:@selector(fireTimer)
+                                                  userInfo:nil
+                                                   repeats:YES];
+    
+    [CTLog notifyLogger:[NSString stringWithFormat:@"Update Interval Changed: %ld", (long)[sender integerValue]]];
 }
 
 -(IBAction)updateStatusBarButton:(id)sender{
     [_coinBase performSelectorInBackground:@selector(reloadPrices) withObject:nil];
+    [CTLog notifyLogger:@"Update menu option pressed"];
 }
 
 - (IBAction)goToCoinbase:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://coinbase.com"]];
+    [CTLog notifyLogger:@"Opened https://coinbase.com in browser"];
 }
 
 -(IBAction)copyBuyPrice:(id)sender{
     [_coinBase copyPrice:_coinBase.buyPrice];
+    [CTLog notifyLogger:[NSString stringWithFormat:@"Buy price (%.2f) copied to clipboard",_coinBase.buyPrice]];
 }
 
 -(IBAction)copySellPrice:(id)sender{
     [_coinBase copyPrice:_coinBase.sellPrice];
+    [CTLog notifyLogger:[NSString stringWithFormat:@"Sell price (%.2f) cpoied to clipboard",_coinBase.sellPrice]];
+}
+
+-(void)fireTimer{
+    [_coinBase performSelectorInBackground:@selector(reloadPrices) withObject:nil];
+    [CTLog notifyLogger:@"CoinbaseTicker Timer Fired"];
 }
 
 -(void)applicationWillTerminate:(NSNotification *)notification{
+    [CTLog notifyLogger:@"CoinbaseTicker Closing"];
     [_logger closeLog];
 }
 

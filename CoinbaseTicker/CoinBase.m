@@ -28,13 +28,18 @@
 
 -(double)getPriceFromAPI:(NSString *)URL{
     NSURL *downloadURL = [NSURL URLWithString:URL];
-    NSData *data = [NSData dataWithContentsOfURL:downloadURL];
-    
+    NSData *data;
+    NSString *price;
     NSError *e = nil;
-    NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:data options: NSJSONReadingMutableContainers error: &e];
     
-    NSString *price = [[JSON valueForKey:@"subtotal"]valueForKey:@"amount"];
-    return [price doubleValue];
+    @try{
+        data = [NSData dataWithContentsOfURL:downloadURL];
+        NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:data options: NSJSONReadingMutableContainers error: &e];
+        price = [[JSON valueForKey:@"subtotal"]valueForKey:@"amount"];
+    }
+    @finally{
+        return [price doubleValue];
+    }
 }
 
 -(void)copyPrice:(double)price{
