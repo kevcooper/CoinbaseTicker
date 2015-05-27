@@ -747,7 +747,7 @@
                         <action selector="updateStatusBarButton:" target="Voe-Tx-rLC" id="9bl-Pl-tSb"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Go to Coinbase" id="lJq-WE-bje">
+                <menuItem title="Coinbase" id="lJq-WE-bje">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="goToCoinbase:" target="Voe-Tx-rLC" id="eyP-FZ-Oma"/>
