@@ -7,12 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <Sparkle/SUUpdater.h>
 @class CoinBase;
 @class StatusBarView;
 @class CTLog;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+@property (strong) IBOutlet SUUpdater *sparkleUpdater;
 @property (strong) CTLog *logger;
 
 @property (assign) IBOutlet NSWindow *window;
@@ -28,7 +30,5 @@
 -(IBAction)changeUpdateInterval:(id)sender;
 -(IBAction)goToCoinbase:(id)sender;
 -(IBAction)updateStatusBarButton:(id)sender;
--(IBAction)copyBuyPrice:(id)sender;
--(IBAction)copySellPrice:(id)sender;
 
 @end

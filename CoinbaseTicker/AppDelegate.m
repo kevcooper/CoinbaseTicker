@@ -43,6 +43,8 @@ NSUserDefaults *prefs;
                                                   selector:@selector(fireTimer)
                                                   userInfo:nil
                                                    repeats:YES];
+    
+    [_sparkleUpdater checkForUpdatesInBackground];
 }
 
 -(IBAction)changeUpdateInterval:(id)sender{
@@ -66,16 +68,6 @@ NSUserDefaults *prefs;
 - (IBAction)goToCoinbase:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://coinbase.com"]];
     [CTLog notifyLogger:@"Opened https://coinbase.com in browser"];
-}
-
--(IBAction)copyBuyPrice:(id)sender{
-    [_coinBase copyPrice:_coinBase.buyPrice];
-    [CTLog notifyLogger:[NSString stringWithFormat:@"Buy price (%.2f) copied to clipboard",_coinBase.buyPrice]];
-}
-
--(IBAction)copySellPrice:(id)sender{
-    [_coinBase copyPrice:_coinBase.sellPrice];
-    [CTLog notifyLogger:[NSString stringWithFormat:@"Sell price (%.2f) cpoied to clipboard",_coinBase.sellPrice]];
 }
 
 -(void)fireTimer{

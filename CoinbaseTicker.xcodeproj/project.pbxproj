@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3618A6051B16265000D1AF15 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3618A6041B16265000D1AF15 /* Sparkle.framework */; };
+		3618A6071B1627E100D1AF15 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3618A6041B16265000D1AF15 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3618A6091B162DCC00D1AF15 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 3618A6081B162DCC00D1AF15 /* dsa_pub.pem */; };
 		362BF02219A5C82A0041E61D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362BF02119A5C82A0041E61D /* Cocoa.framework */; };
 		362BF02C19A5C82A0041E61D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 362BF02A19A5C82A0041E61D /* InfoPlist.strings */; };
 		362BF02E19A5C82A0041E61D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 362BF02D19A5C82A0041E61D /* main.m */; };
@@ -33,7 +36,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3618A6061B1627D200D1AF15 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3618A6071B1627E100D1AF15 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3618A6041B16265000D1AF15 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		3618A6081B162DCC00D1AF15 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		362BF01E19A5C82A0041E61D /* CoinbaseTicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinbaseTicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		362BF02119A5C82A0041E61D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		362BF02419A5C82A0041E61D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -67,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				362BF02219A5C82A0041E61D /* Cocoa.framework in Frameworks */,
+				3618A6051B16265000D1AF15 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +123,7 @@
 		362BF02019A5C82A0041E61D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3618A6041B16265000D1AF15 /* Sparkle.framework */,
 				362BF02119A5C82A0041E61D /* Cocoa.framework */,
 				362BF04019A5C82A0041E61D /* XCTest.framework */,
 				362BF02319A5C82A0041E61D /* Other Frameworks */,
@@ -142,6 +162,7 @@
 		362BF02819A5C82A0041E61D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3618A6081B162DCC00D1AF15 /* dsa_pub.pem */,
 				362BF02919A5C82A0041E61D /* CoinbaseTicker-Info.plist */,
 				362BF02A19A5C82A0041E61D /* InfoPlist.strings */,
 				362BF02D19A5C82A0041E61D /* main.m */,
@@ -179,6 +200,7 @@
 				362BF01A19A5C82A0041E61D /* Sources */,
 				362BF01B19A5C82A0041E61D /* Frameworks */,
 				362BF01C19A5C82A0041E61D /* Resources */,
+				3618A6061B1627D200D1AF15 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -245,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3618A6091B162DCC00D1AF15 /* dsa_pub.pem in Resources */,
 				362BF02C19A5C82A0041E61D /* InfoPlist.strings in Resources */,
 				362BF03A19A5C82A0041E61D /* Images.xcassets in Resources */,
 				362BF03219A5C82A0041E61D /* Credits.rtf in Resources */,
@@ -404,9 +427,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoinbaseTicker/CoinbaseTicker-Prefix.pch";
 				INFOPLIST_FILE = "CoinbaseTicker/CoinbaseTicker-Info.plist";
+				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -417,9 +445,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoinbaseTicker/CoinbaseTicker-Prefix.pch";
 				INFOPLIST_FILE = "CoinbaseTicker/CoinbaseTicker-Info.plist";
+				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
