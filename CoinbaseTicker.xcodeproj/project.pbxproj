@@ -7,18 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3618A6051B16265000D1AF15 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3618A6041B16265000D1AF15 /* Sparkle.framework */; };
-		3618A6071B1627E100D1AF15 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3618A6041B16265000D1AF15 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		027B35D996D427A59A8242B2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B881BCA21496587D7E1EDD14 /* libPods.a */; };
 		3618A6091B162DCC00D1AF15 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 3618A6081B162DCC00D1AF15 /* dsa_pub.pem */; };
-		362BF02219A5C82A0041E61D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362BF02119A5C82A0041E61D /* Cocoa.framework */; };
 		362BF02C19A5C82A0041E61D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 362BF02A19A5C82A0041E61D /* InfoPlist.strings */; };
 		362BF02E19A5C82A0041E61D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 362BF02D19A5C82A0041E61D /* main.m */; };
 		362BF03219A5C82A0041E61D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 362BF03019A5C82A0041E61D /* Credits.rtf */; };
 		362BF03519A5C82A0041E61D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 362BF03419A5C82A0041E61D /* AppDelegate.m */; };
 		362BF03819A5C82A0041E61D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362BF03619A5C82A0041E61D /* MainMenu.xib */; };
 		362BF03A19A5C82A0041E61D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 362BF03919A5C82A0041E61D /* Images.xcassets */; };
-		362BF04119A5C82A0041E61D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362BF04019A5C82A0041E61D /* XCTest.framework */; };
-		362BF04219A5C82A0041E61D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362BF02119A5C82A0041E61D /* Cocoa.framework */; };
 		362BF04A19A5C82A0041E61D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 362BF04819A5C82A0041E61D /* InfoPlist.strings */; };
 		362BF04C19A5C82A0041E61D /* CoinbaseTickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 362BF04B19A5C82A0041E61D /* CoinbaseTickerTests.m */; };
 		36900A471A10AD50008D9020 /* CTLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 36900A461A10AD50008D9020 /* CTLog.m */; };
@@ -43,20 +39,15 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3618A6071B1627E100D1AF15 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3618A6041B16265000D1AF15 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		0EB07A84B6E83A43C0607AA8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3618A6081B162DCC00D1AF15 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		362BF01E19A5C82A0041E61D /* CoinbaseTicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinbaseTicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		362BF02119A5C82A0041E61D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		362BF02419A5C82A0041E61D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		362BF02519A5C82A0041E61D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		362BF02619A5C82A0041E61D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		362BF02919A5C82A0041E61D /* CoinbaseTicker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoinbaseTicker-Info.plist"; sourceTree = "<group>"; };
 		362BF02B19A5C82A0041E61D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		362BF02D19A5C82A0041E61D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -67,7 +58,6 @@
 		362BF03719A5C82A0041E61D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		362BF03919A5C82A0041E61D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		362BF03F19A5C82A0041E61D /* CoinbaseTickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinbaseTickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		362BF04019A5C82A0041E61D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		362BF04719A5C82A0041E61D /* CoinbaseTickerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoinbaseTickerTests-Info.plist"; sourceTree = "<group>"; };
 		362BF04919A5C82A0041E61D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		362BF04B19A5C82A0041E61D /* CoinbaseTickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoinbaseTickerTests.m; sourceTree = "<group>"; };
@@ -77,6 +67,8 @@
 		36BA707419B97B8000D3CD47 /* CoinBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoinBase.m; sourceTree = "<group>"; };
 		36DC2A511A0AB59900A810E1 /* StatusBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarView.h; sourceTree = "<group>"; };
 		36DC2A521A0AB59900A810E1 /* StatusBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarView.m; sourceTree = "<group>"; };
+		965BF530B4DF58295064D5D3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B881BCA21496587D7E1EDD14 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				362BF02219A5C82A0041E61D /* Cocoa.framework in Frameworks */,
-				3618A6051B16265000D1AF15 /* Sparkle.framework in Frameworks */,
+				027B35D996D427A59A8242B2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,8 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				362BF04219A5C82A0041E61D /* Cocoa.framework in Frameworks */,
-				362BF04119A5C82A0041E61D /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +97,7 @@
 				362BF04519A5C82A0041E61D /* CoinbaseTickerTests */,
 				362BF02019A5C82A0041E61D /* Frameworks */,
 				362BF01F19A5C82A0041E61D /* Products */,
+				96721438E3EF93FB3D618EFA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,22 +113,9 @@
 		362BF02019A5C82A0041E61D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3618A6041B16265000D1AF15 /* Sparkle.framework */,
-				362BF02119A5C82A0041E61D /* Cocoa.framework */,
-				362BF04019A5C82A0041E61D /* XCTest.framework */,
-				362BF02319A5C82A0041E61D /* Other Frameworks */,
+				B881BCA21496587D7E1EDD14 /* libPods.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		362BF02319A5C82A0041E61D /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				362BF02419A5C82A0041E61D /* AppKit.framework */,
-				362BF02519A5C82A0041E61D /* CoreData.framework */,
-				362BF02619A5C82A0041E61D /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		362BF02719A5C82A0041E61D /* CoinbaseTicker */ = {
@@ -190,6 +167,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		96721438E3EF93FB3D618EFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				965BF530B4DF58295064D5D3 /* Pods.debug.xcconfig */,
+				0EB07A84B6E83A43C0607AA8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -197,10 +183,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 362BF04F19A5C82A0041E61D /* Build configuration list for PBXNativeTarget "CoinbaseTicker" */;
 			buildPhases = (
+				31B48B267540E55F10088357 /* Check Pods Manifest.lock */,
 				362BF01A19A5C82A0041E61D /* Sources */,
 				362BF01B19A5C82A0041E61D /* Frameworks */,
 				362BF01C19A5C82A0041E61D /* Resources */,
 				3618A6061B1627D200D1AF15 /* CopyFiles */,
+				F2FB124EA2954C0A6B49B6F0 /* Copy Pods Resources */,
+				367AC25E1B43B51300645048 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -284,6 +273,52 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31B48B267540E55F10088357 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		367AC25E1B43B51300645048 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LOCATION=\"${BUILT_PRODUCTS_DIR}\"/\"${FRAMEWORKS_FOLDER_PATH}\"\n\n# Usually set by Xcode\n# CODE_SIGN_IDENTITY=\"Developer ID Application: Hobbyist Software\"\n\ncodesign --verbose --force --sign \"$CODE_SIGN_IDENTITY\" \"$LOCATION/Sparkle.framework/Versions/A\"";
+		};
+		F2FB124EA2954C0A6B49B6F0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		362BF01A19A5C82A0041E61D /* Sources */ = {
@@ -424,8 +459,10 @@
 		};
 		362BF05019A5C82A0041E61D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 965BF530B4DF58295064D5D3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kevin Cooper (LDTE48J46U)";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -434,7 +471,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoinbaseTicker/CoinbaseTicker-Prefix.pch";
 				INFOPLIST_FILE = "CoinbaseTicker/CoinbaseTicker-Info.plist";
-				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -442,8 +480,10 @@
 		};
 		362BF05119A5C82A0041E61D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EB07A84B6E83A43C0607AA8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kevin Cooper (LDTE48J46U)";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,7 +492,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoinbaseTicker/CoinbaseTicker-Prefix.pch";
 				INFOPLIST_FILE = "CoinbaseTicker/CoinbaseTicker-Info.plist";
-				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

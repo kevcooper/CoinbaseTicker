@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		203ED5C5D5AE6C387EC5DE0C /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C53CFB0B9B1CFD8F001298 /* Pods-dummy.m */; };
+		23B5A110EA74B8F541DF45DE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7896B605C236BE7E8A89B6DD /* Cocoa.framework */; };
+		2C973BFCE99D7B447593B0DA /* Pods-CoinbaseTicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8800D4CD9D71A15C7713D4 /* Pods-CoinbaseTicker-dummy.m */; };
+		497FF94FFBDCE89CAD14E48C /* Pods-CoinbaseTickerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F425ACBF8D220B8422CC7E /* Pods-CoinbaseTickerTests-dummy.m */; };
+		65D4176583B03A0C32A3EABB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7896B605C236BE7E8A89B6DD /* Cocoa.framework */; };
+		9CFC3DA3FDB8664F38BC339F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7896B605C236BE7E8A89B6DD /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		033F02BCB7F224BF75CCDA36 /* Pods-CoinbaseTickerTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CoinbaseTickerTests-resources.sh"; sourceTree = "<group>"; };
+		0DD588F29206934C3AD18F25 /* Pods-CoinbaseTickerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoinbaseTickerTests.release.xcconfig"; sourceTree = "<group>"; };
+		0F47340910B0CA1A67C76ACA /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		1CD923C24992F25A8E71CF6B /* Pods-CoinbaseTickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoinbaseTickerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		29C8877406250ECEB652B21A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F8800D4CD9D71A15C7713D4 /* Pods-CoinbaseTicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CoinbaseTicker-dummy.m"; sourceTree = "<group>"; };
+		32C53CFB0B9B1CFD8F001298 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		3B300B77B56989090AD65608 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3D9CAD0F17BFE3F2610380DB /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		482CF473632492DF20CF5937 /* Pods-CoinbaseTickerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoinbaseTickerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		59F54243FE4C88BB7ACFAAD1 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		5D68F4DC1C61ACC41ABB6371 /* Pods-CoinbaseTicker-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CoinbaseTicker-resources.sh"; sourceTree = "<group>"; };
+		62C21E6843FBA5DB7D9A5DB9 /* Pods-CoinbaseTicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoinbaseTicker.release.xcconfig"; sourceTree = "<group>"; };
+		6710B58D684399CA96A71C4E /* Pods-CoinbaseTicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoinbaseTicker.debug.xcconfig"; sourceTree = "<group>"; };
+		75C16C7114C6504A6B72E014 /* Pods-CoinbaseTicker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CoinbaseTicker-acknowledgements.markdown"; sourceTree = "<group>"; };
+		76C5EB530AABC6C2BCBD2DE3 /* Pods-CoinbaseTickerTests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CoinbaseTickerTests-environment.h"; sourceTree = "<group>"; };
+		7896B605C236BE7E8A89B6DD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		7D38E78A4BC9D241751976DB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		830A3E138B437AD4D125FFD1 /* Pods-CoinbaseTickerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CoinbaseTickerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		98F425ACBF8D220B8422CC7E /* Pods-CoinbaseTickerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CoinbaseTickerTests-dummy.m"; sourceTree = "<group>"; };
+		A55853C06BDEFFFEAD573548 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		AA4F7C839094B5B635FE58AD /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		B305FAF02EF39165A847F9E3 /* libPods-CoinbaseTickerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoinbaseTickerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0377FE3A7C7297998FD3818 /* Pods-CoinbaseTicker-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CoinbaseTicker-environment.h"; sourceTree = "<group>"; };
+		D61DA26DD12C770FC03D716D /* Pods-CoinbaseTicker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoinbaseTicker-acknowledgements.plist"; sourceTree = "<group>"; };
+		F540A00F11E3715AFC67B0E8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		F8B992DBF216CA35D33E3A20 /* libPods-CoinbaseTicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoinbaseTicker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7688A1182A9203421F6B2583 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23B5A110EA74B8F541DF45DE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD07E9060FFFAC395BB729C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CFC3DA3FDB8664F38BC339F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA27E502577DEA4FEEF504F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65D4176583B03A0C32A3EABB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11C51DB1267EC2A843ECE33E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2834BF4A2F5C589D514BF7BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6866454BE00ED0F5E515925 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		31F75F374DB603A7E7DC6107 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29C8877406250ECEB652B21A /* libPods.a */,
+				F8B992DBF216CA35D33E3A20 /* libPods-CoinbaseTicker.a */,
+				B305FAF02EF39165A847F9E3 /* libPods-CoinbaseTickerTests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C76AEF688486AB86B717B37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D9CAD0F17BFE3F2610380DB /* Pods-acknowledgements.markdown */,
+				0F47340910B0CA1A67C76ACA /* Pods-acknowledgements.plist */,
+				32C53CFB0B9B1CFD8F001298 /* Pods-dummy.m */,
+				59F54243FE4C88BB7ACFAAD1 /* Pods-environment.h */,
+				A55853C06BDEFFFEAD573548 /* Pods-resources.sh */,
+				7D38E78A4BC9D241751976DB /* Pods.debug.xcconfig */,
+				F540A00F11E3715AFC67B0E8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		764196542E945E64A2EF6350 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA4F7C839094B5B635FE58AD /* Sparkle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8317D097FA3DAF53B00D3BC3 /* Pods-CoinbaseTickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				830A3E138B437AD4D125FFD1 /* Pods-CoinbaseTickerTests-acknowledgements.markdown */,
+				482CF473632492DF20CF5937 /* Pods-CoinbaseTickerTests-acknowledgements.plist */,
+				98F425ACBF8D220B8422CC7E /* Pods-CoinbaseTickerTests-dummy.m */,
+				76C5EB530AABC6C2BCBD2DE3 /* Pods-CoinbaseTickerTests-environment.h */,
+				033F02BCB7F224BF75CCDA36 /* Pods-CoinbaseTickerTests-resources.sh */,
+				1CD923C24992F25A8E71CF6B /* Pods-CoinbaseTickerTests.debug.xcconfig */,
+				0DD588F29206934C3AD18F25 /* Pods-CoinbaseTickerTests.release.xcconfig */,
+			);
+			name = "Pods-CoinbaseTickerTests";
+			path = "Target Support Files/Pods-CoinbaseTickerTests";
+			sourceTree = "<group>";
+		};
+		8D5916212A51E2C82A21FC40 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3C76AEF688486AB86B717B37 /* Pods */,
+				99F9A54B81FCEAD13F59F7ED /* Pods-CoinbaseTicker */,
+				8317D097FA3DAF53B00D3BC3 /* Pods-CoinbaseTickerTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		99F9A54B81FCEAD13F59F7ED /* Pods-CoinbaseTicker */ = {
+			isa = PBXGroup;
+			children = (
+				75C16C7114C6504A6B72E014 /* Pods-CoinbaseTicker-acknowledgements.markdown */,
+				D61DA26DD12C770FC03D716D /* Pods-CoinbaseTicker-acknowledgements.plist */,
+				2F8800D4CD9D71A15C7713D4 /* Pods-CoinbaseTicker-dummy.m */,
+				C0377FE3A7C7297998FD3818 /* Pods-CoinbaseTicker-environment.h */,
+				5D68F4DC1C61ACC41ABB6371 /* Pods-CoinbaseTicker-resources.sh */,
+				6710B58D684399CA96A71C4E /* Pods-CoinbaseTicker.debug.xcconfig */,
+				62C21E6843FBA5DB7D9A5DB9 /* Pods-CoinbaseTicker.release.xcconfig */,
+			);
+			name = "Pods-CoinbaseTicker";
+			path = "Target Support Files/Pods-CoinbaseTicker";
+			sourceTree = "<group>";
+		};
+		A00C7B0B11AC8D1DA7C8ACF0 = {
+			isa = PBXGroup;
+			children = (
+				3B300B77B56989090AD65608 /* Podfile */,
+				2834BF4A2F5C589D514BF7BF /* Frameworks */,
+				ADA562E77B702F0B332837A8 /* Pods */,
+				31F75F374DB603A7E7DC6107 /* Products */,
+				8D5916212A51E2C82A21FC40 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A38E5FE9918C57D565C89064 /* Sparkle */ = {
+			isa = PBXGroup;
+			children = (
+				764196542E945E64A2EF6350 /* Frameworks */,
+				11C51DB1267EC2A843ECE33E /* Resources */,
+			);
+			path = Sparkle;
+			sourceTree = "<group>";
+		};
+		A6866454BE00ED0F5E515925 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				7896B605C236BE7E8A89B6DD /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		ADA562E77B702F0B332837A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A38E5FE9918C57D565C89064 /* Sparkle */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00C4C655FE05667D07BC8A96 /* Pods-CoinbaseTickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54E174CA2BAA3F7389BD31D4 /* Build configuration list for PBXNativeTarget "Pods-CoinbaseTickerTests" */;
+			buildPhases = (
+				532B28327E65D44205117DF7 /* Sources */,
+				7688A1182A9203421F6B2583 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-CoinbaseTickerTests";
+			productName = "Pods-CoinbaseTickerTests";
+			productReference = B305FAF02EF39165A847F9E3 /* libPods-CoinbaseTickerTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B147532297B4E851B107A563 /* Pods-CoinbaseTicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23EB1524DAA04762073F58AB /* Build configuration list for PBXNativeTarget "Pods-CoinbaseTicker" */;
+			buildPhases = (
+				BBF389B58E31E1D066EA74AA /* Sources */,
+				BD07E9060FFFAC395BB729C5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-CoinbaseTicker";
+			productName = "Pods-CoinbaseTicker";
+			productReference = F8B992DBF216CA35D33E3A20 /* libPods-CoinbaseTicker.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B6E6D1181016B2C2A2296D88 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2712370D9202060B063E2EF /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				9BD39D0C43E753CDF681C38B /* Sources */,
+				CA27E502577DEA4FEEF504F0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 29C8877406250ECEB652B21A /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6E31C4ECC6ACAD07D67C162 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = 7EF3C8BB156A8C238BEE67EB /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A00C7B0B11AC8D1DA7C8ACF0;
+			productRefGroup = 31F75F374DB603A7E7DC6107 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B6E6D1181016B2C2A2296D88 /* Pods */,
+				B147532297B4E851B107A563 /* Pods-CoinbaseTicker */,
+				00C4C655FE05667D07BC8A96 /* Pods-CoinbaseTickerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		532B28327E65D44205117DF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				497FF94FFBDCE89CAD14E48C /* Pods-CoinbaseTickerTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD39D0C43E753CDF681C38B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203ED5C5D5AE6C387EC5DE0C /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF389B58E31E1D066EA74AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C973BFCE99D7B447593B0DA /* Pods-CoinbaseTicker-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		08C8DDAB67E7365C255F1DD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D38E78A4BC9D241751976DB /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1D77342FCA4438311C60DBBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CD923C24992F25A8E71CF6B /* Pods-CoinbaseTickerTests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4F243CB15AC683A34C670848 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62C21E6843FBA5DB7D9A5DB9 /* Pods-CoinbaseTicker.release.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		63E0470E101FA0529A4C44E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DD588F29206934C3AD18F25 /* Pods-CoinbaseTickerTests.release.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		72FAB6B9C1967C21D060BB17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6710B58D684399CA96A71C4E /* Pods-CoinbaseTicker.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A56901C791E0F690CE31A954 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB8EC3AEA6F57FC5A0C9A2E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		DAD50A4F98D29F542C64C199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F540A00F11E3715AFC67B0E8 /* Pods.release.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23EB1524DAA04762073F58AB /* Build configuration list for PBXNativeTarget "Pods-CoinbaseTicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72FAB6B9C1967C21D060BB17 /* Debug */,
+				4F243CB15AC683A34C670848 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54E174CA2BAA3F7389BD31D4 /* Build configuration list for PBXNativeTarget "Pods-CoinbaseTickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D77342FCA4438311C60DBBA /* Debug */,
+				63E0470E101FA0529A4C44E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EF3C8BB156A8C238BEE67EB /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB8EC3AEA6F57FC5A0C9A2E2 /* Debug */,
+				A56901C791E0F690CE31A954 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2712370D9202060B063E2EF /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08C8DDAB67E7365C255F1DD0 /* Debug */,
+				DAD50A4F98D29F542C64C199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6E31C4ECC6ACAD07D67C162 /* Project object */;
+}
