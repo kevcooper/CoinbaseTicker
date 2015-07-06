@@ -54,7 +54,9 @@ NSUserDefaults *prefs;
 }
 
 -(void)redrawTitle{
-    if([prefs boolForKey:@"showSellPrice"] == YES){
+    if (model.buyPrice < 0.00){
+        _statusBarView.title =[NSString stringWithFormat:@"--฿--"];
+    }else if([prefs boolForKey:@"showSellPrice"] == YES){
         _statusBarView.title =[NSString stringWithFormat:@"$%.2f/$%.2f",model.buyPrice,model.sellPrice];
     }else{
         _statusBarView.title =[NSString stringWithFormat:@"$%.2f",model.buyPrice];

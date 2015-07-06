@@ -37,9 +37,11 @@
         NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:data options: NSJSONReadingMutableContainers error: &e];
         price = [[JSON valueForKey:@"subtotal"]valueForKey:@"amount"];
     }
-    @finally{
-        return [price doubleValue];
+    @catch(NSException *e){
+        return -1.00;
     }
+    
+    return [price doubleValue];
 }
 
 -(void)copyPrice:(double)price{
