@@ -44,8 +44,9 @@ NSUserDefaults *prefs;
                                                   userInfo:nil
                                                    repeats:YES];
     
-    [_sparkleUpdater checkForUpdatesInBackground];
 }
+
+
 
 -(IBAction)changeUpdateInterval:(id)sender{
     [prefs setInteger:[sender integerValue] forKey:@"updateInterval"];
@@ -58,6 +59,11 @@ NSUserDefaults *prefs;
                                                    repeats:YES];
     
     [CTLog notifyLogger:[NSString stringWithFormat:@"Update Interval Changed: %ld", (long)[sender integerValue]]];
+}
+
+- (IBAction)clickPrefs:(id)sender {
+    [[NSApplication sharedApplication] activateIgnoringOtherApps : YES];
+    [self.window makeKeyAndOrderFront:nil];
 }
 
 -(IBAction)updateStatusBarButton:(id)sender{

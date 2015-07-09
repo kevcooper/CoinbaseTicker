@@ -7,14 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <Sparkle/SUUpdater.h>
 @class CoinBase;
 @class StatusBarView;
 @class CTLog;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (strong) IBOutlet SUUpdater *sparkleUpdater;
 @property (strong) CTLog *logger;
 
 @property (assign) IBOutlet NSWindow *window;
